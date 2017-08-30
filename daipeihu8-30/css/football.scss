@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,
+body,
+.container{
+    width: 100%;
+    height: 100%;
+}
+body{
+    font-size: 0.14rem;
+}
+
+
+@font-face {
+    font-family: iconfont;
+    src: url("../iconfont/iconfont.woff") format("woff"), url("../iconfont/iconfont.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: iconfont;
+    src: url("../iconfont/iconfont-menu.woff") format("woff"), url("../iconfont/iconfont-menu.ttf") format("truetype");
+}
+
+.iconfont {
+    font-family: iconfont;
+}
+
+
+ul{
+    list-style: none;
+}
+i{
+    font-style: normal;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    header,
+    footer{
+        width: 100%;
+        height: 0.44rem;
+    }
+    header{
+        background: #0dc441;
+        ul{
+            height: 100%;
+            display: flex;
+            li:first-child,
+            li:last-child {
+                height: 100%;
+                width: .44rem;
+                line-height: .44rem;
+                text-align: center;
+                font-size: .24rem;
+                color: rgba(255, 255, 255, 0.5);
+            }
+            li:nth-child(2) {
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                span {
+                    height: .25rem;
+                    width: .59rem;
+                    font-size: .12rem;
+                    color: rgba(255, 255, 255, 0.5);
+                    background-color: rgba(10, 217, 133, 0.5);
+                    line-height: .25rem;
+                    text-align: center;
+                    &.active {
+                        color: rgba(255, 255, 255, 1);
+                        background-color: rgba(10, 217, 133, 1);
+                    }
+                    &:first-child {
+                        border-radius: .10rem 0 0 .10rem;
+                    }
+                    &:last-child {
+                        border-radius: 0 .10rem .10rem 0;
+                    }
+                }
+            }
+            
+        }
+    }
+    nav{
+        height: .35rem;
+        background: #fff;
+        ul {
+            height: 100%;
+            display: flex;
+            li {
+                flex: 1;
+                line-height: .35rem;
+                text-align: center;
+                border-bottom: solid 1px #d9d9d9;
+                &.active {
+                    border-bottom: solid .02rem #0dc441;
+                    color: #0dc441;
+                }
+            }
+            
+        }
+    }
+    section{
+        flex: 1;
+        width: 100%;
+        overflow: auto;
+        padding-bottom: .04rem;
+        background-color: #fff;
+        ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-content: flex-start;
+            
+            li{
+                font-size: 16px;
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin-top: .04rem;
+                padding: 0 .04rem;
+                img{
+                    width: 100%;
+                }
+                &:nth-child(odd) {
+                    padding-right: .02rem;
+                }
+                &:nth-child(even) {
+                    padding-right: .02rem;
+                }
+            }
+        }
+    }
+    footer{
+        ul{
+            height: 100%;
+            display: flex;
+            border-top: solid 0.5px #ced6cf;
+            li{
+                flex: 1;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                color: #d6d6d6;
+                b {
+                    font-size: .12rem;
+                    line-height: .12rem;
+                }
+                &.active i,
+                &.active b {
+                    color: #0dc441;
+                    font-weight: normal;
+                }
+                i {
+                    font-size: .24rem;
+                    line-height: .24rem;
+                }
+                &:nth-child(3){
+                    position: relative;
+                    i {
+                        position: absolute;
+                        left: 50%;
+                        transform: translate(-50%, 0);
+                        top: -0.06rem;
+                        width: .50rem;
+                        height: .50rem;
+                        background-color: #fff;
+                        border-radius: 50%;
+                        border: solid 1px #ced6cf;
+                        text-align: center;
+                        line-height: .48rem;
+                        font-size: .34rem;
+                        
+                    }
+                } 
+                
+            }
+        }
+    }
+}
